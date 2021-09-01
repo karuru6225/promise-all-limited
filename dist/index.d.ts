@@ -4,9 +4,9 @@ declare const RUNNING_STATUS: {
 };
 export declare type RunningStatus = typeof RUNNING_STATUS[keyof typeof RUNNING_STATUS];
 export declare type PromiseOptions = {
-    limit: number;
+    limit?: number;
     callback?: (index: number, status: RunningStatus) => void;
 };
-export declare const PromiseAllLimited: <T>(promises: (() => Promise<T>)[], options?: PromiseOptions) => Promise<T[]>;
-export {};
+declare const PromiseAllLimited: <T>(promises: (() => Promise<T>)[], options?: PromiseOptions | undefined) => Promise<T[]>;
+export default PromiseAllLimited;
 //# sourceMappingURL=index.d.ts.map
